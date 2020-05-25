@@ -4,9 +4,9 @@ I manage server configuration via GIT, as per this article on dotfilts: https://
 ## Quickstart
 
 ```bash
-wget https://github.com/traverseda/sysGit/raw/master/gsys.sh -P /usr/bin/ #Add gsys management tool
-chmod +x /usr/bin/gsys.sh
-gsys.sh config --local status.showUntrackedFiles no #Way too many files otherwise
-git clone --bare https://github.com/traverseda/sysGit.git /root/sysImage
-gsys.sh checkout raidArray #Or whatever box this is actually on...
+wget https://github.com/traverseda/sysGit/raw/master/gsys.sh #Add gsys management tool
+chmod +x ./gsys.sh
+./gsys.sh config --local status.showUntrackedFiles no #Way too many files otherwise
+git clone --branch <branchname> --bare https://github.com/traverseda/sysGit.git /root/sysImage
+./gsys.sh checkout #To actually add the files to your system image, this also installed gsys.sh to `/usr/bin/gsys.sh`
 ```
